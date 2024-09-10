@@ -13,8 +13,6 @@ def open_robot_order_website():
     navigate_to("https://robotsparebinindustries.com/#/robot-order")
     
     fill_form_with_excel_data()
-    
-    log_out()
 
 def navigate_to(url):
     """Navigates to the given URL"""
@@ -26,11 +24,6 @@ def log_in():
     page.fill("#username", "maria")
     page.fill("#password", "thoushallnotpass")
     page.click("button:text('Log in')")
-
-def log_out():
-    """Presses the 'Log out' button"""
-    page = browser.page()
-    page.click("text=Log out")
 
 def close_annoying_modal():
     page = browser.page()
